@@ -1,5 +1,4 @@
 ﻿using Practica6.Classes;
-using Practica6.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,24 +14,29 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Practica6
+namespace Practica6.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// Администратор 
-    /// логин - admin
-    /// пароль - QWERqwer123!@#
+    /// Логика взаимодействия для MainPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainPage : Page
     {
-        public MainWindow()
+        public MainPage()
         {
             InitializeComponent();
-            FrameClass.MainFrame = frm;
-            FrameClass.MainFrame.Navigate(new MainPage());
-            Base.EP = new BaseEntities2();
         }
 
-       
+        private void Reg_Click(object sender, RoutedEventArgs e)
+        {
+            FrameClass.MainFrame.Navigate(new PageReg());
+        }
+
+        private void In_Click(object sender, RoutedEventArgs e)
+        {
+            FrameClass.MainFrame.Navigate(new PageIn());
+
+
+            
+        }
     }
 }
