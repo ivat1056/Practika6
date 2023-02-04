@@ -50,12 +50,12 @@ namespace Practica6.Pages
                 if (sotr.Role_ID == 1)
                 {
                     MessageBox.Show("Здравствуйте, администратор!");
-                    FrameClass.MainFrame.Navigate(new PageAdmin());
+                    FrameClass.MainFrame.Navigate(new PageAdmin(sotr));
                 }
                 else
                 {
                     MessageBox.Show("Здравствуйте, пользователь!");
-                    FrameClass.MainFrame.Navigate(new PageUser());
+                    FrameClass.MainFrame.Navigate(new PageUser(sotr));
                 }
                 
             }

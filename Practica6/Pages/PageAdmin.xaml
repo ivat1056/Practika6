@@ -9,8 +9,40 @@
       Title="PageAdmin">
 
     <Grid>
-        
-            <TextBox Name="Surname" Margin="184,125,184,68" Text="Admin"/>
-        
+        <StackPanel>
+            <StackPanel>
+                <TextBlock Text="Личный кабинет" Style="{StaticResource TBStyle}"/>
+            </StackPanel>
+            <StackPanel>
+                <GroupBox Header="Фамилия">
+                    <TextBox Name="Surname"/>
+                </GroupBox>
+                <GroupBox Header="Имя">
+                    <TextBox Name="Name"/>
+                </GroupBox>
+                <GroupBox Header="Отчество">
+                    <TextBox Name="Otch"/>
+                </GroupBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Дата рождения" Style="{StaticResource TBStyle}"/>
+                <DatePicker Name="Birthday" FontSize="18" Width="200" Margin="5,0,0,0"></DatePicker>
+                <TextBlock Text="Пол:" Style="{StaticResource TBStyle}"/>
+
+                <ComboBox  x:Name="ComboBox1" Height="30" >
+
+                    <ComboBoxItem>Мужской</ComboBoxItem>
+                    <ComboBoxItem>Женский</ComboBoxItem>
+
+                </ComboBox>
+            </StackPanel>
+            <StackPanel>
+                <Button Name="btnSave" Content="Сохранить данные" Click="btnUpdate_Click"  Style="{StaticResource btnstyle1}"/>
+                <Button Name="btnLogPas" Content="Изменить логин и пароль" Click="btnLogPas_Click" Style="{StaticResource btnstyle1}"/>
+                <Button Name="btnUsers" Content="Пользователи" Click="btnUsers_Click" Style="{StaticResource btnstyle1}"/>
+                <Button Name="btnHome" Content="Недвижимость" Click="btnHome_Click" Style="{StaticResource btnstyle1}"/>
+                <Button Name="btn_back" Content="Назад" Click="btn_back_Click" Style="{StaticResource btnstyle1}"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

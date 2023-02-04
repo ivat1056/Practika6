@@ -9,8 +9,48 @@
       Title="PageUser">
 
     <Grid>
-       
-            <TextBox Name="Surname" Margin="144,76,144,76" Text="121212"/>
-        
+        <StackPanel>
+            <StackPanel>
+                <TextBlock Text="Личный кабинет" Style="{StaticResource TBStyle}"/>
+            </StackPanel>
+            <StackPanel>
+                <Image Name="photoUser" Source="\Resources\photo.png"  Margin="2" Width="150" HorizontalAlignment="Center"/>
+             </StackPanel>
+                    <StackPanel>
+            <GroupBox Header="Фамилия">
+                    <TextBox Name="Surname" IsReadOnly="True" KeyDown="Surname_KeyDown"/>
+            </GroupBox>
+            <GroupBox Header="Имя">
+                    <TextBox IsReadOnly="True" Name="Name"/>
+            </GroupBox>
+            <GroupBox Header="Отчество">
+                    <TextBox Name="Otch" IsReadOnly="True" KeyDown="Otch_KeyDown"/>
+            </GroupBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Дата рождения"  Style="{StaticResource TBStyle}"/>
+            <DatePicker Name="Birthday" FontSize="18" Width="200" Margin="5,0,0,0"  KeyDown="Birthday_KeyDown"></DatePicker>
+            <TextBlock Text="Пол:" Style="{StaticResource TBStyle}"/>
+
+                <TextBox Name="ComboBox1" IsReadOnly="True" KeyDown="Surname_KeyDown" FontSize="18" Width="120"/>
+                
+               
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Button Name="btnAddPhoto" Content="Добавить фото" Click="btnAddPhoto_Click" Style="{StaticResource btnstyle1}"/>
+                <Button Name="btnAddPhotos" Content="Добавить несколько фото" Click="btnAddPhotos_Click" Style="{StaticResource btnstyle1}"/>
+                <Button Name="btnUpdPhoto" Content="Изменить фото" Click="btnUpdPhoto_Click" Style="{StaticResource btnstyle1}"/>
+               
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center">
+                <Button Name="UpdLogAndPass" Content="Изменить логин и пароль" Click="UpdLogAndPass_Click" Style="{StaticResource btnstyle1}"/>
+                <Button Name="Save" Content="Изменить " Click="Save_Click" Style="{StaticResource btnstyle1}" KeyDown="Save_KeyDown"/>
+               
+
+            </StackPanel>
+            <Button Name="Back" Content="Назад" Click="Back_Click" Style="{StaticResource btnstyle1}"/>
+        </StackPanel>
     </Grid>
 </Page>
