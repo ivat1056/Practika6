@@ -26,6 +26,9 @@ namespace Practica6
         }
     
         public virtual DbSet<Floor> Floor { get; set; }
+        public virtual DbSet<Home_photo> Home_photo { get; set; }
+        public virtual DbSet<HomeTa> HomeTa { get; set; }
+        public virtual DbSet<Photo> Photo { get; set; }
         public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Users> Users { get; set; }

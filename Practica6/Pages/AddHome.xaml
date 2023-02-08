@@ -1,0 +1,25 @@
+﻿<Page x:Class="Practica6.Pages.AddHome"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Practica6.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddHome">
+
+    <Grid>
+        <StackPanel>
+            <GroupBox Header="Название">
+                <TextBox Name="Name" />
+            </GroupBox>
+            <GroupBox Header="Цена">
+                <TextBox Name="Cost"/>
+            </GroupBox>
+            <StackPanel>
+                <Button Name="btnSave" Content="Добавить" Click="btnSave_Click"  Style="{StaticResource btnstyle1}"/>
+                <Button Name="btn_back" Content="Назад" Click="btn_back_Click" Style="{StaticResource btnstyle1}"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

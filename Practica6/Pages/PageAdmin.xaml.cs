@@ -46,17 +46,17 @@ namespace Practica6.Pages
 
         private void btnUsers_Click(object sender, RoutedEventArgs e)
         {
-
+            FrameClass.MainFrame.Navigate(new AdminListView(users1));
         }
 
         private void btnHome_Click(object sender, RoutedEventArgs e)
         {
-
+            FrameClass.MainFrame.Navigate(new Home(users1));
         }
 
         private void btnLogPas_Click(object sender, RoutedEventArgs e)
         {
-
+            FrameClass.MainFrame.Navigate(new UpdLoginAndPass(users1));
         }
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)

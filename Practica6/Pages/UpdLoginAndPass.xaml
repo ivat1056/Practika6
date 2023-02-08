@@ -9,6 +9,22 @@
       Title="UpdLoginAndPass">
 
     <Grid>
-        
+        <StackPanel>
+            <StackPanel>
+                <StackPanel>
+                    <TextBlock Text="Изменение логина и пароля" Style="{StaticResource TBStyle}"/>
+                </StackPanel>
+                <GroupBox Header="Новый логин">
+                    <TextBox Name="Login"/>
+                </GroupBox>
+                <GroupBox Header="Новый пароль">
+                    <PasswordBox Name="Password"/>
+                </GroupBox>
+            </StackPanel>
+            <StackPanel>
+                <Button Name="btnSave" Content="Сохранить" Click="btnSave_Click"  Style="{StaticResource btnstyle1}"/>
+                <Button Name="btn_back" Content="Назад" Click="btn_back_Click" Style="{StaticResource btnstyle1}"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

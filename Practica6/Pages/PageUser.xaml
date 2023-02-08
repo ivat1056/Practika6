@@ -37,16 +37,14 @@
                
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button Name="btnAddPhoto" Content="Добавить фото" Click="btnAddPhoto_Click" Style="{StaticResource btnstyle1}"/>
                 <Button Name="btnAddPhotos" Content="Добавить несколько фото" Click="btnAddPhotos_Click" Style="{StaticResource btnstyle1}"/>
-                <Button Name="btnUpdPhoto" Content="Изменить фото" Click="btnUpdPhoto_Click" Style="{StaticResource btnstyle1}"/>
-               
-            </StackPanel>
+               </StackPanel>
 
             <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center">
                 <Button Name="UpdLogAndPass" Content="Изменить логин и пароль" Click="UpdLogAndPass_Click" Style="{StaticResource btnstyle1}"/>
-                <Button Name="Save" Content="Изменить " Click="Save_Click" Style="{StaticResource btnstyle1}" KeyDown="Save_KeyDown"/>
+                <Button Name="Save" Content="Изменить данные" Click="Save_Click" Style="{StaticResource btnstyle1}" KeyDown="Save_KeyDown"/>
                
 
             </StackPanel>

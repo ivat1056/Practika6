@@ -12,27 +12,19 @@ namespace Practica6
     using System;
     using System.Collections.Generic;
     
-    public partial class Users
+    public partial class HomeTa
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Users()
+        public HomeTa()
         {
-            this.Photo = new HashSet<Photo>();
+            this.Home_photo = new HashSet<Home_photo>();
         }
     
-        public int ID { get; set; }
-        public string Surname { get; set; }
+        public int ID_Home { get; set; }
         public string Name { get; set; }
-        public string Middle_name { get; set; }
-        public int Floor_ID { get; set; }
-        public Nullable<System.DateTime> Date_of_birth { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
-        public Nullable<int> Role_ID { get; set; }
+        public string Cost { get; set; }
     
-        public virtual Floor Floor { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Photo> Photo { get; set; }
-        public virtual Role Role { get; set; }
+        public virtual ICollection<Home_photo> Home_photo { get; set; }
     }
 }
